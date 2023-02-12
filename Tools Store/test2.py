@@ -412,26 +412,92 @@
 # # print(r.get())
 
 # root.mainloop()
-import tkinter as tk
-from tkinter import ttk
+# import tkinter as tk
+# from tkinter import ttk
  
-class Window:
-    def __init__(self, root):
-        self.root = root
+# class Window:
+#     def __init__(self, root):
+#         self.root = root
  
-        # Frame
-        self.frame = tk.Frame(self.root, width = 200, height = 200)
-        self.frame.pack()
+#         # Frame
+#         self.frame = tk.Frame(self.root, width = 200, height = 200)
+#         self.frame.pack()
  
-        self.vlist = ["Option1", "Option2", "Option3", "Option4", "Option5"]
+#         self.vlist = ["Option1", "Option2", "Option3", "Option4", "Option5"]
  
-        self.combo = ttk.Combobox(self.frame, values = self.vlist, state = "readonly")
-        self.combo.set("Pick an Option")
-        self.combo.place(x = 20, y = 50)
+#         self.combo = ttk.Combobox(self.frame, values = self.vlist, state = "readonly")
+#         self.combo.set("Pick an Option")
+#         self.combo.place(x = 20, y = 50)
  
  
-root = tk.Tk()
-root.title("Tkinter")
+# root = tk.Tk()
+# root.title("Tkinter")
  
-window = Window(root)
-root.mainloop()
+# window = Window(root)
+# root.mainloop()
+# from tkinter import Tk, Button, Frame, StringVar
+# from tkinter.ttk import Combobox
+
+# options = {'digital tools' : ['Mobile phone accessories','Tablet accessories'],
+#                     'home and kitchen':['Tv','cooler'],'sport':['Men clothing','Women clothing','Bicycle accessories'],
+#                      'car' : ['Car spare parts','motorcycle spare parts']}
+        
+
+
+
+# def get_var_1(event):
+#     value = cb1_var.get()
+# #     cb2_var.set('...')
+#     cb2.config(values=options[value])
+
+
+# def get_info():
+#     print(cb1_var.get(), cb2_var.get())
+
+
+# root = Tk()
+
+# cb_frame = Frame(root)
+# cb_frame.pack(side='left')
+
+# cb1_values = list(options.keys())
+
+# cb1_var = StringVar()
+# cb1_var.set('select')
+# cb1 = Combobox(cb_frame, values=cb1_values, textvariable=cb1_var)
+# cb1.pack(side='top')
+# cb1.bind('<<ComboboxSelected>>', get_var_1)
+
+
+# cb2_var = StringVar()
+# cb2_var.set('...')
+# cb2 = Combobox(cb_frame, values=options[cb1_values[0]], textvariable=cb2_var)
+# cb2.pack(side='bottom')
+
+
+# btn_frame = Frame(root)
+# btn_frame.pack(side='right')
+# Button(btn_frame, text='Confirm', command=get_info).pack()
+
+
+# root.mainloop()
+# sql = "CALL get_costumer();"
+# val = ('John', 'nnn','hh','09387145655','email_l')
+
+# print("CALL Register_category(%s,@id);",5)
+
+# import asyncio
+
+# async def async_foo():
+#     print("async_foo started")
+#     await asyncio.sleep(5)
+#     print("async_foo done")
+
+# async def main():
+#     asyncio.ensure_future(async_foo())  # fire and forget async_foo()
+#     print('Do some actions 1')
+#     await asyncio.sleep(5)
+#     print('Do some actions 2')
+
+# loop = asyncio.get_event_loop()
+# loop.run_until_complete(main())

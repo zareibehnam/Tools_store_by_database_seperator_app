@@ -1,0 +1,40 @@
+ def menu_item_selected(self, *args):
+        """ handle menu selected event """
+        Label(self.root,text=self.select_item.get(),bg='#fff',relief="solid").place(x=100,y=90)
+
+
+    def create_menu_button(self,arg_tuple=None,x=10,y=10):
+        self.select_item = StringVar()
+        self.select_item.trace("w", self.menu_item_selected)
+
+        """ create a menu button """
+        # menu variable
+        items = ('Red', 'Green', 'Blue')
+
+        # create the Menubutton
+        menu_button = Menubutton(self.root,text='Select')
+        # menu_button1 = Menubutton(self.root,text='Select')
+
+        # create a new menu instance
+        menu = Menu(menu_button, tearoff=0)
+        # menu1 = Menu(menu_button1,tearoff=0)
+
+        for item in items:
+            menu.add_radiobutton(
+                label=item,
+                value=item,
+                variable=self.select_item)
+        
+        # for item in items:
+        #     menu1.add_radiobutton(
+        #         label=item,
+        #         value=item,
+        #         variable=self.select_item)
+
+        # associate menu with the Menubutton
+        menu_button["menu"] = menu
+        # menu_button1["menu"] = menu1
+        #place_menu_button
+        menu_button.place(x=x,y=y)
+        # menu_button1.place(x=x,y=y+20)
+        menu_button.mainloop()
